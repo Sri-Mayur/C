@@ -8,9 +8,12 @@ void sol(int n, int arr[]){
         for(int i=0;i<n;i++){
             if(arr[i]%2!=0){
                 printf("%d",arr[i]);
-                printf(" ,");
-         
-    }   
+
+                //Simply print comma for n-1 times 
+                if(i<n-1){
+                     printf(", ");
+                }
+                }   
         }
 }
 
@@ -26,8 +29,6 @@ int main() {
         printf("Enter element %d:",i+1);
         scanf("%d",&arr[i]);   
     }
-
     sol(n,arr);
-
     return 0;
 }
