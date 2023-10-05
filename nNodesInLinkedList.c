@@ -1,14 +1,23 @@
 //Write a program to reverse the Linked List
 // Set-18
 
+/*Step 1: Create a structure.
+  Step 2: Create int main and take value of n.
+  Step 3: Create a linked list of n nodes.
+  Step 4: Create n nodes.
+  Step 5: Display the linked list.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
+// Step 1:
 struct Node{
     int data;
     struct Node* next;
 };
 
+//Step 4:
 //Function to create a new node
 struct Node* createNode(int data){
     struct Node* newNode= (struct Node*)malloc(sizeof(struct Node));
@@ -21,7 +30,8 @@ struct Node* createNode(int data){
     return newNode;
 }
 
-//Function to creat a linked list with n nodes
+//Step 3:
+//Function to create a linked list with n nodes
 struct Node* createLinkedList(int n){
     if(n<=0){
         printf("Invalid Input!!!!");
@@ -33,7 +43,7 @@ struct Node* createLinkedList(int n){
     
     for (int i=1; i<=n; i++){
         int data;
-        printf("Enter the data of node%d",i);
+        printf("Enter the data of node%d: ",i);
         scanf("%d",&data);
         
         struct Node* newNode = createNode(data);
@@ -51,6 +61,7 @@ struct Node* createLinkedList(int n){
     return head;
 }
 
+//Step 5:
 //Function to display the linked list
 void displayLinkedList(struct Node* head){
     struct Node* current = head;
@@ -65,6 +76,8 @@ void displayLinkedList(struct Node* head){
     
 }
 
+
+//Step 2:
 int main(){
     int n;
     printf("Enter the number of nodes: ");
